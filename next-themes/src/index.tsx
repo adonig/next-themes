@@ -87,7 +87,7 @@ const Theme = ({
     }
 
     enable?.()
-  }, [nonce])
+  }, [nonce, themeRoot])
 
   const setTheme = React.useCallback(value => {
     if (typeof value === 'function') {
@@ -176,7 +176,8 @@ const Theme = ({
           value,
           themes,
           nonce,
-          scriptProps
+          scriptProps,
+          themeRoot
         }}
       />
 
